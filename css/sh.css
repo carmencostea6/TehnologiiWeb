@@ -1,0 +1,109 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  display: flex;
+  flex-direction: column; /* Elementele sunt așezate unul sub altul */
+  align-items: center; /* Centrează doar pe orizontală elementele principale */
+  justify-content: flex-start; /* Elemente începute de sus */
+  min-height: 100vh; /* Înălțimea completă a ferestrei */
+  margin: 0;
+  background-color: #F5EBFA;
+  color: #49225B;
+  overflow-x: hidden; /* Ascunde orice conținut ce depășește pe orizontală */
+}
+.imagine {
+  display: block;
+  margin: 20px auto; /* Centrare orizontală */
+  padding: 10px; /* Spațiu între imagine și ramă */
+  border: 5px solid #333; /* Grosimea și culoarea ramei */
+  border-radius: 5px; /* Colțuri rotunjite, dacă dorești */
+  max-width: 300px; /* Lățimea maximă a imaginii */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Umbra ramei pentru un efect 3D */
+}
+
+h1,h2  {
+  width: 100%;
+  text-align: center;
+  color: #49225B;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+/* Stil pentru Paragraf */
+p {
+  text-align: left; /* Aliniere la stânga */
+  width: 90%; /* Ajustează lățimea pentru aspect */
+  margin: 20px auto; /* Centrare pozițională pe orizontală */
+  line-height: 1.6; /* Spațiere între linii */
+  font-size: 16px;
+}
+
+/* Imagine Styling */
+img {
+  width: 100%; /* Imaginea ocupă lățimea containerului */
+  max-width: 280px; /* Lățime maximă pentru ecrane mari */
+  height: auto; /* Menține proporțiile */
+  margin-top: 20px;
+  display: block; /* Tratăm imaginea ca element bloc */
+  margin-left: auto; /* Aliniaza la stânga */
+  margin-right: auto; /* Aliniaza la dreapta */
+}
+
+/* Iframe Styling */
+iframe {
+  width: 100%; /* Se adaptează la container */
+  max-width: 600px; /* Dimensiunea maximă pe ecrane mari */
+  height: 300px; /* Ajustează înălțimea */
+  border: none; /* Elimină marginea */
+  display:block;
+  margin-left: auto; /* Aliniaza la stânga */
+  margin-right: auto; /* Aliniaza la dreapta */
+}
+
+/* About Me Section */
+.about-me {
+  display: flex;
+  flex-direction: column; /* Elemente organizate pe verticală */
+  align-items: flex-start; /* Aliniere la stânga */
+  gap: 10px; /* Spațiere între elemente */
+  padding: 20px;
+  background-color: #dcb8ee;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  line-height: 1.8;
+  width: 100%; /* Lățime adaptivă pentru telefoane */
+  
+  
+}
+
+.about-me ul {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside; /* Stil liste mai atrăgător */
+}
+
+.about-me li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Media Query pentru telefoane */
+@media screen and (max-width: 600px) {
+  p {
+      font-size: 14px; /* Dimensiune mai mică pentru text */
+  }
+
+  .about-me {
+      padding: 15px; /* Reducem paddingul */
+  }
+
+  iframe {
+      height: 250px; /* Ajustăm înălțimea iframe-ului */
+  }
+}
