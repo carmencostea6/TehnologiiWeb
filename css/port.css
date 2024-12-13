@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+/* Body Styling */
+body {
+    display: flex;
+    flex-direction: column; /* Elementele sunt așezate unul sub altul */
+    align-items: center; /* Centrează doar pe orizontală elementele principale */
+    justify-content: flex-start; /* Elemente începute de sus */
+    height: 100vh; /* Înălțimea completă a ferestrei */
+    margin: 0;
+    background-color:#F5EBFA;
+    color:#49225B;
+  }
+  
+ 
+  p {
+    text-align: left; /* Aliniere la stânga */
+    width: 80%; /* Ajustează lățimea pentru aspect */
+    margin: 20px auto; /* Centrare pozițională pe orizontală */
+    line-height: 1.6; /* Spațiere între linii (pentru paragraf) */
+    font-size: 16px;
+  }
+  h2
+  {
+    text-align: center;
+  }
+  
+  /* Imagine Styling */
+  img {
+    width: 280px;
+    height: 280px;
+    margin-top: 20px;
+    display: block; /* Tratăm imaginea ca element bloc */
+    margin-left: auto; /* Centrează imaginea */
+    margin-right: auto;
+  }
+
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+  /* Stil pentru fiecare carusel */
+  .w3-content {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden; /* Ascunde imagini care ies din container */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Stiluri pentru imagini */
+  /* Stiluri pentru imagini */
+.mySlides {
+    width: 100%;  /* Imaginile vor ocupa 100% din lățimea containerului */
+    height: 100%; /* Imaginile vor ocupa 100% din înălțimea containerului */
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    object-fit: cover; /* Menține proporțiile imaginii și le face să ocupe întregul container */
+}
+
+  
+  
+  /* Caruselul ART - animă pozele de sus */
+  .mySlides.art:nth-child(odd) {
+    animation-name: slideFromTop;
+  }
+  
+  .mySlides.art:nth-child(even) {
+    animation-name: slideFromBottom;
+  }
+  
+  /* Caruselul TRAVEL - animă pozele de sus */
+  .mySlides.travel:nth-child(odd) {
+    animation-name: slideFromTop;
+  }
+  
+  .mySlides.travel:nth-child(even) {
+    animation-name: slideFromBottom;
+  }
+  
+  /* Caruselul SPORT - animă pozele de sus */
+  .mySlides.sports:nth-child(odd) {
+    animation-name: slideFromTop;
+  }
+  
+  .mySlides.sports:nth-child(even) {
+    animation-name: slideFromBottom;
+  }
+  
+  /* Caruselul PROJECTS - animă pozele de sus */
+  .mySlides.projects:nth-child(odd) {
+    animation-name: slideFromTop;
+  }
+  
+  .mySlides.projects:nth-child(even) {
+    animation-name: slideFromBottom;
+  }
+  
+  /* Stilizare pentru Headere și Texte */
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #49225B;
+  }
+  
+  /* Carusel Container Styling */
+.carousel-section {
+    display: grid; /* Folosim grid pentru a organiza carusele */
+    grid-template-columns: repeat(2, 1fr); /* Două coloane de dimensiuni egale pe desktop */
+    grid-template-rows: repeat(2, 1fr); /* Două rânduri de dimensiuni egale pe desktop */
+    gap: 20px; /* Spațiu între carusele */
+    padding: 20px;
+    justify-items: center; /* Alinierea la centru pe orizontală și verticală */
+    width: 80vw; /* Lățimea gridului va fi 80% din lățimea ecranului */
+    height: 80vh; /* Înălțimea gridului va fi 80% din înălțimea ecranului */
+    max-width: 800px; /* Maximizăm lățimea pentru ecrane mari */
+    max-height: 800px; /* Maximizăm înălțimea pentru ecrane mari */
+}
+
+/* Media Query pentru ecrane mici (mobile) */
+@media (max-width: 800px) {
+    .carousel-section {
+      width: 80vw; /* Lățimea gridului va fi 80% din lățimea ecranului */
+      height: 80vh; /* Înălțimea gridului va fi 80% din înălțimea ecranului */
+      grid-template-columns: repeat(2, 1fr); /* Două coloane pe mobile */
+      grid-template-rows: repeat(2, 1fr); /* Două rânduri pe mobile */
+    }
+  }
+  .description {
+    display: flex;
+    flex-direction: column; /* Elemente organizate pe verticală */
+    align-items: flex-start; /* Aliniere la stânga */
+    gap: 10px; /* Spațiere între elemente */
+    padding: 20px;
+    background-color: #dcb8ee;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    line-height: 1.8;
+    text-align: center;
+    width: 100%; /* Lățime adaptivă pentru telefoane */
+    
+    
+  }
+
+  

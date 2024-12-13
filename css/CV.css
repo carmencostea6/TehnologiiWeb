@@ -1,0 +1,221 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5EBFA; 
+    color: #333;
+}
+h1  {
+  width: 100%;
+  text-align: center;
+  color: #49225B;
+  border-bottom: 2px solid #49225B;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+p:first-of-type 
+{
+  font-size: 1.2rem;
+  color: #49225B;
+  margin-top: 5px;
+  text-align: center;
+  width:100%;
+}
+/* Secțiuni principale */
+section {
+    display: flex;
+    flex-direction: column; /* Elemente pe verticală */
+    justify-content: flex-start; /* Elemente aliniate la început */
+    align-items: center; /* Elemente centrate pe orizontală */
+    width: 100%; /* Ocupă întreaga lățime a ecranului */
+    margin: 20px 0;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Titluri de secțiuni */
+ h2,h3{
+    width: 100%;
+    text-align: left;
+    color: #49225B;
+    border-bottom: 2px solid #49225B;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Text și liste */
+p, ul {
+    text-indent: 20px; /* Spațiere la început de rând */
+    width: 75%; /* Asigură lățimea completă */
+}
+
+ul {
+    margin-top: 10px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Flexbox pentru responsivitate */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Elemente se rearanjează pe linii noi dacă spațiul e insuficient */
+    gap: 20px; /* Spațiu între elemente */
+    justify-content: space-between; /* Distribuie uniform elementele */
+    width: 100%; /* Ocupă toată lățimea */
+}
+
+/* Elemente individuale din secțiuni */
+.flex-item {
+    flex: 1 1 calc(50% - 20px); /* Elemente ocupă 50% din lățime minus spațiul dintre ele */
+    min-width: 300px; /* Dimensiunea minimă pentru fiecare element */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Stiluri tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    overflow-x: auto; /* Asigură scroll pe dispozitive mici */
+    display: block; /* Scroll orizontal pentru ecrane mici */
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: center; /* Centrare text */
+}
+
+table th {
+    background-color: #49225B;
+    color: #fff;
+}
+
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+table tr:hover {
+    background-color: #ccc; /* Evidențiere la hover */
+}
+
+/* Buton de download */
+.download {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.download a {
+    background-color: #49225B;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.download a:hover {
+    background-color: #6e3482;
+}
+
+/* Responsivitate */
+@media screen and (max-width: 768px) {
+    .flex-item {
+        flex: 1 1 100%; /* Elemente ocupă toată lățimea pe ecrane mici */
+    }
+
+    h1, h2 {
+        text-align: center; /* Re-centrare titluri */
+    }
+
+    p, ul {
+        text-indent: 0; /* Eliminăm indentarea */
+    }
+}
+/*DOWNLOAD*/
+.buttonDownload {
+  display: inline-block;
+  position: relative;
+  padding: 10px 25px;
+  background-color:#c85dfd;
+  color: white;
+  font-family: sans-serif;
+  text-decoration: none;
+  font-size: 0.9em;
+  text-align: center;
+  text-indent: 15px;
+  border: none;
+ }
+ 
+ .buttonDownload:hover {
+  background-color: #dcb8ee;
+  color: white;
+ }
+ 
+ .buttonDownload:before, .buttonDownload:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 15px;
+  top: 52%;
+ }
+ 
+ .buttonDownload:before {
+  width: 10px;
+  height: 2px;
+  border-style: solid;
+  border-width: 0 2px 2px;
+ }
+ 
+ .buttonDownload:after {
+  width: 0;
+  height: 0;
+  margin-left: 3px;
+  margin-top: -7px;
+  border-style: solid;
+  border-width: 4px 4px 0 4px;
+  border-color: transparent;
+  border-top-color: inherit;
+  animation: downloadArrow 1s linear infinite;
+  animation-play-state: paused;
+ }
+ 
+ .buttonDownload:hover:before {
+  border-color: #e5aef876;
+ }
+ 
+ .buttonDownload:hover:after {
+  border-top-color: #e5aef876;
+  animation-play-state: running;
+ }
+ 
+ @keyframes downloadArrow {
+  0% {
+   margin-top: -7px;
+   opacity: 1;
+  }
+ 
+  0.001% {
+   margin-top: -15px;
+   opacity: 0.4;
+  }
+ 
+  50% {
+   opacity: 1;
+  }
+ 
+  100% {
+   margin-top: 0;
+   opacity: 0.4;
+  }
+ }
